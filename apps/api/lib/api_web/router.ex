@@ -19,6 +19,14 @@ defmodule ApiWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/" do
+    pipe_through :api
+
+    forward "/graphiql", Absinthe.Plug.GraphiQL,
+      schema: ApiWeb.Schema,
+      interface: :playground
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", ApiWeb do
   #   pipe_through :api
