@@ -22,6 +22,8 @@ defmodule UiWeb.Router do
   scope "/" do
     pipe_through :api
 
+    forward("/graphql", Absinthe.Plug, schema: Api.Schema)
+
     forward "/graphiql", Absinthe.Plug.GraphiQL,
       schema: Api.Schema,
       interface: :playground
