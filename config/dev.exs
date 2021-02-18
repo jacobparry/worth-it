@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :api, ApiWeb.Endpoint,
+config :ui, UiWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -38,13 +38,13 @@ config :api, ApiWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :api, ApiWeb.Endpoint,
+config :ui, UiWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/api_web/(live|views)/.*(ex)$",
-      ~r"lib/api_web/templates/.*(eex)$"
+      ~r"lib/ui_web/(live|views)/.*(ex)$",
+      ~r"lib/ui_web/templates/.*(eex)$"
     ]
   ]
 
