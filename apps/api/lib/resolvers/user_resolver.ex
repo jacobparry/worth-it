@@ -12,6 +12,11 @@ defmodule Api.Resolvers.UserResolver do
      ]}
   end
 
+  def get_user(_, _, _) do
+    Process.sleep(50)
+    {:ok, %{username: "bob1", password: "strOngestEver!"}}
+  end
+
   def get_user_restaurants(_, _, _) do
     {:ok,
      [
