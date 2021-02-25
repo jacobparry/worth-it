@@ -25,6 +25,10 @@ defmodule Api.Schema do
   object :food do
     field(:weight, :string)
     field(:price, :string)
+
+    field(:submitted_user, :user) do
+      resolve(&UserResolver.get_user/3)
+    end
   end
 
   query do
