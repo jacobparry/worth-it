@@ -26,7 +26,8 @@ defmodule UiWeb.Router do
 
     forward "/graphiql", Absinthe.Plug.GraphiQL,
       schema: Api.Schema,
-      interface: :playground
+      interface: :playground,
+      pipeline: {ApolloTracing.Pipeline, :plug}
   end
 
   # Other scopes may use custom stacks.

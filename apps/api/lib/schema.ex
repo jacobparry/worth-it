@@ -1,5 +1,6 @@
 defmodule Api.Schema do
   use Absinthe.Schema
+  use ApolloTracing
 
   alias Api.Resolvers.UserResolver
 
