@@ -8,12 +8,12 @@
 use Mix.Config
 
 # Configures the endpoint
-config :api, ApiWeb.Endpoint,
+config :ui, UiWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "SmdagTY6li49kEirsPAcSomeB5ffwVmlB4U0quz3ePvyyHci01jHLoCCt0VmLD+0",
-  render_errors: [view: ApiWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Api.PubSub,
-  live_view: [signing_salt: "kLZbIGpR"]
+  secret_key_base: "IQqmN4xKsHypSDAFCQ/T5kOMKEr5PGrg7Fp1/MxMxrJigX6xUlJbPIj0kA7bH61O",
+  render_errors: [view: UiWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: Ui.PubSub,
+  live_view: [signing_salt: "trtdukDH"]
 
 # Configures Elixir's Logger
 config :logger, :console,
