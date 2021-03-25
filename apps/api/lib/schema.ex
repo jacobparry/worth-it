@@ -29,6 +29,14 @@ defmodule Api.Schema do
     field(:submitted_user, :user) do
       resolve(&UserResolver.get_user/3)
     end
+
+    field(:async_user, :user) do
+      resolve(&UserResolver.get_user_async/2)
+    end
+
+    field(:batched_user, :user) do
+      resolve(&UserResolver.get_user_batch/3)
+    end
   end
 
   query do
